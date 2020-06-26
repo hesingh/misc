@@ -24,7 +24,7 @@ control new_ingress(...) { // no keyword used here, but the example shows how to
   apply {
     // new code is here
     // …
-   // old_ingress.apply();
+    old_ingress.apply();
   }
 }
 
@@ -81,7 +81,7 @@ parser customer_parser override {
 }
 ```
 
-We need to combine the two into one standard p4 program without special syntax like this:
+We need to combine the two into one standard p4 program as follows.
 
 ```p4
 parser vendor_parser { 
