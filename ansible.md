@@ -19,7 +19,7 @@ parser vendor_parser(…) override { // tells compiler to patch previously defin
   }
 }
 
-control new_ingress() {
+control new_ingress() { // no keyword used here, but the example shows how to merge two controls.
    old_ingress = vendor_ingress()
   apply {
     // new code is here
