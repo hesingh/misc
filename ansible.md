@@ -38,7 +38,7 @@ package V1Switch(vendor_parser, new_ingers, new_deparser) override; // tells com
 ## New Keywords: `super.xxx.transition`
 `xxx` in syntax above is a parser state.
 
-An example use of synatax in merging two P4 programs is shown below.
+An example use of syntax in merging two P4 programs is shown below.
 
 ```p4
 vendor.p4
