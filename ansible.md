@@ -118,3 +118,25 @@ parser vendor_parser {
 }
 ```
 
+## Override for Tables and Actions
+
+```p4
+     // Augmenting action parameter and action body is supported. Defaults to adding
+     // body to end.
+     action set_port_properties(...) override {  // tells compiler to patch previously
+                                                 // defined action.
+     }
+
+     // tells compiler to allow adding new action.
+     action New_action() {
+     }
+     table ipv4_acl override {
+         key override = {  // Patch new key element
+	     // new key element.
+         }
+     actions override = {  // Patch to existing actions.
+         New_action;
+     }
+     default_action override = action_x;  // tells compiler to use this action as default_action.
+     }
+```
