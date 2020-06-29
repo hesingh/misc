@@ -63,7 +63,7 @@ parser vendor_parser {
 ```p4
 customer.p4
 ------------
-parser customer_parser override {
+parser vendor_parser override {
 
    state parse_ipv6_state {
     extract(hdr.ipv6);
