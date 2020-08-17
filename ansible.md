@@ -75,7 +75,9 @@ parser vendor_parser override {
         extract(hdr.eth);
         transition (hdr.eth.ethertype) {
             IPV6: parse_ipv6_state;
-            default: super.parse_ethernet.transition; // no need to extract, only switch based on already extracted header.
+            // no need to extract, only switch based
+            // on already extracted header
+            default: super.parse_ethernet.transition;
         }
     }
 }
