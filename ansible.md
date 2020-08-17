@@ -12,18 +12,20 @@ struct headers_t override { // tells compiler this is a "patch" to the previous 
     new_header_t new_header;
 }
 
-parser vendor_parser(…) override {  // tells compiler to patch previously defined parser FSM.
-    state ethernet override {       // override previously defined state definition.
+// tells compiler to patch previously
+// defined parser with the same name ("base_parser")
+parser base_parser(…) override {
+    state ethernet override {  // override previously defined state definition
         ...
     }
     
-    state new_state {               // If no override keyword, then add the state as a new one.
+    state new_state {  // if no override, then add the state as a new one
         ...
     }
 }
 
-control new_ingress(...) { // no keyword used here, but the example shows how to merge two controls.
-    old_ingress = vendor_ingress()
+control new_ingress(...) {  // no keyword used here, but the example shows how to merge two controls.
+    old_ingress = base_ingress()
     apply {
         // new code is here
         // …
@@ -32,10 +34,10 @@ control new_ingress(...) { // no keyword used here, but the example shows how to
 }
 
 control new_deparser(...) override {
-    // customer deparser here
+    // extended deparser here
 }
 
-package V1Switch(vendor_parser, new_ingers, new_deparser) override;  // tells compiler to ignore (drop) previous package declaration and use this one
+package V1Switch(base_parser, new_ingers, new_deparser) override;  // tells compiler to ignore (drop) previous package declaration and use this one
 	
 ```
 ## New Keywords: `super.xxx.transition`
@@ -44,9 +46,9 @@ package V1Switch(vendor_parser, new_ingers, new_deparser) override;  // tells co
 An example use of syntax in merging two P4 programs is shown below.
 
 ```p4
-vendor.p4
+base.p4
 ---------
-parser vendor_parser {
+parser base_parser {
     state parse_ipv4_state {
         extract(hdr.ipv4);
         transition accept;
@@ -63,9 +65,9 @@ parser vendor_parser {
 ```
 
 ```p4
-customer.p4
+extended.p4
 ------------
-parser vendor_parser override {
+parser base_parser override {
     state parse_ipv6_state {
         extract(hdr.ipv6);
         transition accept;
@@ -86,7 +88,7 @@ parser vendor_parser override {
 We need to combine the two into one standard p4 program as follows.
 
 ```p4
-parser vendor_parser { 
+parser base_parser { 
     state parse_ipv6_state {
         extract(hdr.ipv6);
         transition accept;
@@ -97,7 +99,7 @@ parser vendor_parser {
         transition accept;
     }
 
-    // part of the original base state
+    // original base state
     state parse_ethernet_transition {
         transition (hdr.eth.ethertype) {
             IPV4: parse_ipv4_state;
@@ -105,7 +107,7 @@ parser vendor_parser {
         }
     }
 
-    // customer-defined override
+    // extended state
     state parse_ethernet {
         extract(hdr.ethernet);
         transition (hdr.eth.ethertype) {
