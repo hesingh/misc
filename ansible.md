@@ -108,9 +108,12 @@ parser vendor_parser {
     // customer-defined override
     state parse_ethernet {
         extract(hdr.ethernet);
-        transition (hdr.ethernet.ethertype) {
+        transition (hdr.eth.ethertype) {
             IPV6: ipv6_state;
-            default: parse_ethernet_transition;  // replace super reference with the name of the newly created transition part of the base state.
+            // replace super reference with the
+            // name of the newly created transition
+            // part of the base state
+            default: parse_ethernet_transition;
         }
     }
 }
