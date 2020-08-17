@@ -109,7 +109,7 @@ parser base_parser {
 
     // extended state
     state parse_ethernet {
-        extract(hdr.ethernet);
+        extract(hdr.eth);
         transition (hdr.eth.ethertype) {
             IPV6: ipv6_state;
             // replace super reference with the name of the newly created transition part of the base state
