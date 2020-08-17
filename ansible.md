@@ -144,3 +144,18 @@ New_action;
 default_action override = action_x;  // tells compiler to use this action as default_action.
 }
 ```
+
+## Misc
+```p4
+control foo(…) override {
+    action moo(…) override {
+        // new code here
+        super.moo(); // call base action.
+    }
+    apply {
+        // new code
+        super.apply(); // call apply method from the base code.
+        // more new code
+    }
+}
+```
