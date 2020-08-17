@@ -9,30 +9,33 @@ Examples for how the `override` keyword is used are provided below.
 
 ```p4
 struct headers_t override { // tells compiler this is a "patch" to the previous type definition, not a new one.
-   new_header_t new_header;
+    new_header_t new_header;
 }
 
-parser vendor_parser(…) override { // tells compiler to patch previously defined parser FSM.
-   state ethernet override { // override previously defined state definition.
-   }
-  state new_state { // If no override keyword, then add the state as a new one.
-  }
+parser vendor_parser(…) override {  // tells compiler to patch previously defined parser FSM.
+    state ethernet override {       // override previously defined state definition.
+        ...
+    }
+    
+    state new_state {               // If no override keyword, then add the state as a new one.
+        ...
+    }
 }
 
 control new_ingress(...) { // no keyword used here, but the example shows how to merge two controls.
-   old_ingress = vendor_ingress()
-  apply {
-    // new code is here
-    // …
-    old_ingress.apply();
-  }
+    old_ingress = vendor_ingress()
+    apply {
+        // new code is here
+        // …
+        old_ingress.apply();
+    }
 }
 
 control new_deparser(...) override {
-   // customer deparser here
+    // customer deparser here
 }
 
-package V1Switch(vendor_parser, new_ingers, new_deparser) override; // tells compiler to ignore (drop) previous package declaration and use this one
+package V1Switch(vendor_parser, new_ingers, new_deparser) override;  // tells compiler to ignore (drop) previous package declaration and use this one
 	
 ```
 ## New Keywords: `super.xxx.transition`
@@ -44,19 +47,18 @@ An example use of syntax in merging two P4 programs is shown below.
 vendor.p4
 ---------
 parser vendor_parser {
-
- state parse_ipv4_state {
+state parse_ipv4_state {
     extract(hdr.ipv4);
     transition accept;
-  }
+}
 
-  state parse_ethernet {
+state parse_ethernet {
     extract(hdr.eth);
-    transition (hdr.eth.ethertype) {
-      IPV4: parse_ipv4_state;
-      default: accept;
+        transition (hdr.eth.ethertype) {
+            IPV4: parse_ipv4_state;
+            default: accept;
+        }
     }
-  }
 }
 ```
 
@@ -64,20 +66,18 @@ parser vendor_parser {
 customer.p4
 ------------
 parser vendor_parser override {
-
-   state parse_ipv6_state {
-    extract(hdr.ipv6);
-    transition accept;
-  }
-
-  state parse_ethernet override {
-    extract(hdr.eth);
-    transition (hdr.eth.ethertype) {
-      IPV6: parse_ipv6_state;
-      default: super.parse_ethernet.transition; // no need to extract, only switch based on already extracted header.
+    state parse_ipv6_state {
+        extract(hdr.ipv6);
+        transition accept;
     }
-  }
 
+    state parse_ethernet override {
+        extract(hdr.eth);
+        transition (hdr.eth.ethertype) {
+            IPV6: parse_ipv6_state;
+            default: super.parse_ethernet.transition; // no need to extract, only switch based on already extracted header.
+        }
+    }
 }
 ```
 
@@ -85,58 +85,55 @@ We need to combine the two into one standard p4 program as follows.
 
 ```p4
 parser vendor_parser { 
-
-  state parse_ipv6_state {
-    extract(hdr.ipv6);
-    transition accept;
-  }
-
-  state _parse_ipv4_state {
-    extract(hdr.ipv4);
-    transition accept;
-  }
-
-  // part of the original base state
-  state parse_ethernet_transition {
-    transition (hdr.eth.ethertype) {
-      IPV4: parse_ipv4_state;
-      default: accept;
-    }
-  }
-
-  // customer-defined override
-  state parse_ethernet {
-    extract(hdr.ethernet);
-    transition (hdr.ethernet.ethertype) {
-      IPV6: ipv6_state;
-      default: parse_ethernet_transition; // replace super reference with the name of the newly created transition part of the base state.
+    state parse_ipv6_state {
+        extract(hdr.ipv6);
+        transition accept;
     }
 
+    state _parse_ipv4_state {
+        extract(hdr.ipv4);
+        transition accept;
+    }
 
-  }
+    // part of the original base state
+    state parse_ethernet_transition {
+        transition (hdr.eth.ethertype) {
+            IPV4: parse_ipv4_state;
+            default: accept;
+        }
+    }
 
+    // customer-defined override
+    state parse_ethernet {
+        extract(hdr.ethernet);
+        transition (hdr.ethernet.ethertype) {
+            IPV6: ipv6_state;
+            default: parse_ethernet_transition;  // replace super reference with the name of the newly created transition part of the base state.
+        }
+    }
 }
 ```
 
 ## Override for Tables and Actions
 
 ```p4
-     // Augmenting action parameter and action body is supported. Defaults to adding
-     // body to end.
-     action set_port_properties(...) override {  // tells compiler to patch previously
-                                                 // defined action.
-     }
+// Augmenting action parameter and action body is supported. Defaults to adding
+// body to end.
+action set_port_properties(...) override {  // tells compiler to patch previously
+    // defined action.
+}
 
-     // tells compiler to allow adding new action.
-     action New_action() {
-     }
-     table ipv4_acl override {
-         key override = {  // Patch new key element
-	     // new key element.
-         }
-     actions override = {  // Patch to existing actions.
-         New_action;
-     }
-     default_action override = action_x;  // tells compiler to use this action as default_action.
-     }
+// tells compiler to allow adding new action.
+action New_action() {
+
+}
+table ipv4_acl override {
+key override = {  // Patch new key element
+// new key element.
+}
+actions override = {  // Patch to existing actions.
+New_action;
+}
+default_action override = action_x;  // tells compiler to use this action as default_action.
+}
 ```
