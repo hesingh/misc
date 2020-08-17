@@ -112,9 +112,7 @@ parser base_parser {
         extract(hdr.ethernet);
         transition (hdr.eth.ethertype) {
             IPV6: ipv6_state;
-            // replace super reference with the
-            // name of the newly created transition
-            // part of the base state
+            // replace super reference with the name of the newly created transition part of the base state
             default: parse_ethernet_transition;
         }
     }
