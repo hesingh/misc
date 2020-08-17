@@ -47,13 +47,13 @@ An example use of syntax in merging two P4 programs is shown below.
 vendor.p4
 ---------
 parser vendor_parser {
-state parse_ipv4_state {
-    extract(hdr.ipv4);
-    transition accept;
-}
+    state parse_ipv4_state {
+        extract(hdr.ipv4);
+        transition accept;
+    }
 
-state parse_ethernet {
-    extract(hdr.eth);
+    state parse_ethernet {
+        extract(hdr.eth);
         transition (hdr.eth.ethertype) {
             IPV4: parse_ipv4_state;
             default: accept;
