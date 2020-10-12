@@ -8,18 +8,6 @@
 
 void* memcpy(void* dest, const void* src, size_t num);
 
-static void *(*ubpf_map_lookup)(const void *, const void *) = (void *)1;
-static int (*ubpf_map_update)(void *, const void *, void *) = (void *)2;
-static int (*ubpf_map_delete)(void *, const void *) = (void *)3;
-static int (*ubpf_map_add)(void *, const void *) = (void *)4;
-static uint64_t (*ubpf_time_get_ns)() = (void *)5;
-static uint32_t (*ubpf_hash)(const void *, uint64_t) = (void *)6;
-static void (*ubpf_printf)(const char *fmt, ...) = (void *)7;
-static void *(*ubpf_packet_data)(const void *) = (void *)9;
-static void *(*ubpf_adjust_head)(const void *, uint64_t) = (void *)8;
-static uint32_t (*ubpf_truncate_packet)(const void *, uint64_t) = (void *)11;
-
-
 #define write_partial(a, w, s, v) do { *((uint8_t*)a) = ((*((uint8_t*)a)) & ~(CGEN_MASK(uint8_t, w) << s)) | (v << s) ; } while (0)
 #define write_byte(base, offset, v) do { *(uint8_t*)((base) + (offset)) = (v); } while (0)
 
