@@ -23,7 +23,7 @@ upf_tbl_entry_add_command_fn (vlib_main_t * vm, unformat_input_t * input,
 
   while (unformat_check_input (line_input) != UNFORMAT_END_OF_INPUT)
     {
-      if (unformat (line_input, "%s %s %x %hhu %hhu %hu %hu %s %hhu %hu %hu %u %x %x %hu %hhu %hhu",
+      if (unformat (line_input, "%s %s %x %x %hhu %hhu %hu %hu %s %hhu %hu %hu %u %x %x %hu %hhu %hhu",
 		    &tbl_name,
 		    &action_name,
 		    &key.field0,
