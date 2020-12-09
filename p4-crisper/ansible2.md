@@ -1,11 +1,11 @@
-An overview of prior P4-16 extensions (`P4++`) is provided in ../p4-code-reuse/ansible.md. p4-cripser  is akin to DNA cleaver technology called CRISPER and
+An overview of prior P4-16 extensions (`P4++`) is provided in `../p4-code-reuse/ansible.md`. p4-cripser is akin to DNA cleaver technology called CRISPER and
 helps cleave P4 code at desired locations.
 
 # New Extension(s) 
 
 ## New keyword `cleave`
 
-Cleaving involves removing the object and once all cleaving is  completed
+Cleaving involves removing the object and once all cleaving is completed
 the leftover P4 program and its control plane is dumped to files.
 
 Examples for how the `cleave` keyword is used are provided below.
