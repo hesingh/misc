@@ -6,7 +6,7 @@ helps cleave P4 code at desired locations.
 ## New keyword `cleave`
 
 Cleaving involves removing the object and once all cleaving is  completed
-the leftover P4 program is dumped to a file.
+the leftover P4 program and its control plane is dumped to files.
 
 Examples for how the `cleave` keyword is used are provided below.
 
