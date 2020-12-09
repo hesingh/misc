@@ -33,8 +33,8 @@ parser parserB(…) {
         }
     }
 
-    state parse_mpls cleave { // tells compiler to remove parser state for MPLS.
-	    // No need to remove parse_mpls_bos because its an unused state.
+    state parse_mpls cleave { // tells compiler to cleave parser state for MPLS.
+	    // No need to cleave parse_mpls_bos because its an unused state.
         packet.extract(hdr.mpls.next);
         transition select(hdr.mpls.last.bos) {
             1w1: parse_mpls_bos;
@@ -51,17 +51,17 @@ parser parserB(…) {
 
 }
 
-control ingress(...) cleave { // tells compiler to remove this control
+control ingress(...) cleave { // tells compiler to cleave this control
   ...
 }
 
 control foo(...) {
-    action boo(...) cleave { // action not tied to any table is removed.
+        action boo(...) cleave { // action not tied to any table is cleaved.
 	}
 	
 	action woo(... ) {}
 
-	table moo cleave { // remove table, its action woo(), table invocation in apply block.
+	table moo cleave { // cleave table, its action woo(), table invocation in apply block.
 	    key = {}
 		action = { woo; }
 	}
