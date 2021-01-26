@@ -33,6 +33,21 @@ const IR::Node* ControlBodyEditor::preorder(IR::MethodCallStatement* st) {
     }
     return st;
 }
+/////////// Use of editor is included below ///////////////////////
+        ControlBodyEditor editor(this, program->refMap, program->typeMap);
+        std::ostream* out;
+        out = &std::cout;
+        P4::ToP4 toP4(out, true, nullptr);
+        index = 0;
+        for (auto it : tables) {
+            std::cout << "table: " << it.first << " index " << index << std::endl;
+            ctbls[index].control = control->clone();
+            ctbls[index].table = it.second;
+            ctbls[index].control->body->apply(editor);
+            auto node = ctbls[index].control->body->getNode();
+            node->apply(toP4);
+            index++;
+        }
 
 apply {
    pkt_filter4.apply();
