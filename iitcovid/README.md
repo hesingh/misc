@@ -6,7 +6,7 @@ https://eglobaldoctors.com/#/
 
 # Daily Calls
 
-## Tue, May 5th
+## Tue, May 4th
 
 Join Zoom Meeting Tuesday 5/4 at 7.30 PM PST
 
