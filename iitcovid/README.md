@@ -6,19 +6,19 @@ We are a team of volunteers from different walks of life with varied experiences
 
 Our charter evolves as we identify areas that are critical to our mission. At present, it includes but is not limited to the following:
 
-## Protect the Heroes. 
+## Protect the Heroes
 
 Strengthen our on ground critical and first-line workers by providing them PPE, ensuring they are working in safe environments while they are busy saving lives.
 
-## Keep Oxygen Flowing. 
+## Keep Oxygen Flowing 
 
 Oxygen shortage is the basic challenge for treating COVID-19 patients and we are committed to keep it flowing.
 
-## Democratize Access to Medical Consultation. 
+## Democratize Access to Medical Consultation
 
 Everyone who has been infected by COVID-19 must have a phone number to call for help, talk to professionals who can guide them with next steps in patient care.
 
-## Vaccinate. 
+## Vaccinate
 
 Muster resources worldwide, including WHO's COVAX, financial aid or in-kind to get COVID-19 vaccines to India as soon as possible. Influence and assist the central government’s processes and policies to prevent a third wave. 
 
