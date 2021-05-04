@@ -1,15 +1,29 @@
 # Charter
-1) Get PPEs to critical workers including ones delivering food - get PPEs from U.S. and/or IITD startup I mentioned, 
 
-2) Get oxygen from anywhere, 
+Our mission is to save lives.
 
-3) If an ICU is in a Gurudwara, get emergency ventilators there - ping IITKanpur for ventilators and get some made with CPAP/BiPAP machine ala Cal design, 
+We are a team of volunteers from different walks of life with varied experiences, diverse skills but with a common mission of saving lives during the current COVID-19 surge in India.
 
-4) Any soul who has Covid should have a phone number to call for help, 
+Our charter evolves as we identify areas that are critical to our mission. At present, it includes but is not limited to the following:
 
-5) Get Covid vaccines to India ASAP and yank Modi's chain to setup national policy for vaccination (who gets it first), 
+## Protect the Heroes. 
 
-6) Use Fedex to ship anything to India since they have offered free delivery, 
+Strengthen our on ground critical and first-line workers by providing them PPE, ensuring they are working in safe environments while they are busy saving lives.
 
-7) Get more nurses and doctors to India including tele sessions from the U.S.
+## Keep Oxygen Flowing. 
+
+Oxygen shortage is the basic challenge for treating COVID-19 patients and we are committed to keep it flowing.
+
+## Democratize Access to Medical Consultation. 
+
+Everyone who has been infected by COVID-19 must have a phone number to call for help, talk to professionals who can guide them with next steps in patient care.
+
+## Vaccinate. 
+
+Muster resources worldwide, including WHO's COVAX, financial aid or in-kind to get COVID-19 vaccines to India as soon as possible. Influence and assist the central government’s processes and policies to prevent a third wave. 
+
+## Contact
+
+Join us in fulfilling this noble mission, reach out at savelives@covidindiateam.com
+
 
