@@ -1,3 +1,10 @@
+# Google Doc with Covid Resources
+
+Relevant Google Doc with List of COVID related resources like Oxygen and Hospital & Beds etc. across India:
+
+https://docs.google.com/spreadsheets/u/0/d/1ZmTJVfJvpjaMWs0NUalVXMbSOr6DrdmXvX51RxTDUNY/htmlview#
+
+
 # U.S Docs Consulting to India
 
 An effort by American Association of Physicians of Indian Origin and Sewa International.  Patients from any part of India can get face to face free consultation with doctors, regarding COVID, by signing up through the link above.  This is an effort to relieve the strain on Indian medical system.
