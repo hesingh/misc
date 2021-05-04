@@ -1,3 +1,7 @@
+# List of online COVID-19 resources, India from government
+
+https://www.digit.in/news/general/online-covid-19-resources-hospital-beds-medicines-oxygen-supply-59297.html
+
 # Google Doc with Covid Resources
 
 Relevant Google Doc with List of COVID related resources like Oxygen and Hospital & Beds etc. across India:
