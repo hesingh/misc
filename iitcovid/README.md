@@ -133,7 +133,7 @@ Haryana
 
 https://coronaharyana.in/
 
-Tamil nadu
+Tamil Nadu
 
 https://covidtnadu.com
 
