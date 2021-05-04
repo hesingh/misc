@@ -45,9 +45,9 @@ We will have daily zoom calls starting today 730pm PST, i.e. 8am IST starting Tu
 
 # New
 
-https://www.amazon.de/CRONOS-Sauerstoffkonzentrator-Lovego-Sauerstoffkonzentration-Medizinisches-SCHWARZ/dp/B08KLMPZ79/ref=sr_1_11?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=315055JZ9UNIQ&dchild=1&keywords=oxygen+concentrator&qid=1620165024&sprefix=oxygen+%2Caps%2C278&sr=8-11
+https://tinyurl.com/3jbx44z9
 
-https://www.aliexpress.com/item/1005002504793854.html?spm=a2g0o.productlist.0.0.2e6860[…]2&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_
+https://tinyurl.com/4uymuz4e
 
 https://www.ebay.com/b/Oxygen-Concentrators/155667/bn_52461177
 
