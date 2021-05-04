@@ -6,6 +6,26 @@ https://eglobaldoctors.com/#/
 
 # Daily Calls
 
+## Tue, May 5th
+
+Join Zoom Meeting Tuesday 5/4 at 7.30 PM PST
+
+One tap mobile:
+
+US: +14086380968,,96360349420#,,,,*525396# or +16699006833,,96360349420#,,,,*525396#
+
+Meeting URL:
+
+https://f5networks.zoom.us/j/96360349420?pwd=dk9vd2JKVjBYVG5xRVdzYm4xcGJlUT09
+
+Meeting ID:
+
+963 6034 9420
+
+Passcode:
+
+525396
+
 We will have daily zoom calls starting today 730pm PST, i.e. 8am IST starting Tues May 4 (india time) - zoom link to join is tiny.cc/iitcvteam - those who can help and need help - please both groups come
 
 # Charter
