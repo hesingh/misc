@@ -1,3 +1,9 @@
+# U.S Docs Consulting to India
+
+An effort by American Association of Physicians of Indian Origin and Sewa International.  Patients from any part of India can get face to face free consultation with doctors, regarding COVID, by signing up through the link above.  This is an effort to relieve the strain on Indian medical system.
+
+https://eglobaldoctors.com/#/
+
 # Daily Calls
 
 We will have daily zoom calls starting today 730pm PST, i.e. 8am IST starting Tues May 4 (india time) - zoom link to join is tiny.cc/iitcvteam - those who can help and need help - please both groups come
