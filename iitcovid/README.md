@@ -53,6 +53,12 @@ We will have daily zoom calls starting today 730pm PST, i.e. 8am IST starting Tu
 
 # New Option to Order Oxygen
 
+# Two Specifc Concentrators with 240V 
+
+https://www.indiamart.com/proddetail/oxygen-concentrator-20459543533.html
+
+https://www.indiamart.com/proddetail/jumao-5l-high-purity-portable-oxygen-concentrator-23360410491.html
+
 # New
 
 https://tinyurl.com/3jbx44z9
