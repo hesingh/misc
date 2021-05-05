@@ -1,3 +1,7 @@
+# Twitter
+
+covidindiateam is twitter account name.
+
 # List of online COVID-19 resources, India from government
 
 https://www.digit.in/news/general/online-covid-19-resources-hospital-beds-medicines-oxygen-supply-59297.html
