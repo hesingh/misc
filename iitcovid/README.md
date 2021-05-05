@@ -1,3 +1,5 @@
+Note: Anyone reading this page is welcome to share the page and repo with anyone.
+
 # IITD live tracking of Covid Resources
 
 such as vacant hospital beds in your city, oxygen availability, plasma, videos by renowned doctors, etc.
