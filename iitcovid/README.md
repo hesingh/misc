@@ -1,20 +1,26 @@
 Note: Anyone reading this page is welcome to share the page and repo with anyone.
 
-# IITD live tracking of Covid Resources
+# Resources
+
+## Seatlle engineer created hub for Covid resources
+
+https://www.uktimenews.com/a-seattle-software-engineer-wanted-to-help-his-parents-she-has-created-a-hub-for-covid-resources-across-india/
+
+## IITD live tracking of Covid Resources
 
 such as vacant hospital beds in your city, oxygen availability, plasma, videos by renowned doctors, etc.
 
 https://covidrelief.glideapp.io/
 
-# Task Force Twitter
+## Task Force Twitter
 
 covidindiateam is twitter account name.
 
-# List of online COVID-19 resources, India from government
+## List of online COVID-19 resources, India from government
 
 https://www.digit.in/news/general/online-covid-19-resources-hospital-beds-medicines-oxygen-supply-59297.html
 
-# Google Doc with Covid Resources
+## Google Doc with Covid Resources
 
 Relevant Google Doc with List of COVID related resources like Oxygen and Hospital & Beds etc. across India:
 
