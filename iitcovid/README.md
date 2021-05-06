@@ -2,7 +2,7 @@ Note: Anyone reading this page is welcome to share the page and repo with anyone
 
 # Resources
 
-## Seatlle engineer created hub for Covid resources
+## Seattle engineer created hub for Covid resources
 
 https://www.uktimenews.com/a-seattle-software-engineer-wanted-to-help-his-parents-she-has-created-a-hub-for-covid-resources-across-india/
 
