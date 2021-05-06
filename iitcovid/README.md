@@ -2,6 +2,10 @@ Note: Anyone reading this page is welcome to share the page and repo with anyone
 
 # Resources
 
+## UNICEF India
+
+https://www.path.org/p/covid-19-response/
+
 ## Seattle engineer created hub for Covid resources
 
 https://www.uktimenews.com/a-seattle-software-engineer-wanted-to-help-his-parents-she-has-created-a-hub-for-covid-resources-across-india/
